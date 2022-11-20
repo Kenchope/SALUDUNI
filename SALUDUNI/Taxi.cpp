@@ -8,6 +8,7 @@ int Taxi::getNumPas() { return numPas; }
 //-------------------------------------------
 string Taxi::toString() {
 	stringstream s;
+	s << "------INFORMACION DEL TAXI-------" << endl;
 	s << Transporte::toString();
 	s << "Numero de Pasajeros: " << numPas << endl;
 	return s.str();

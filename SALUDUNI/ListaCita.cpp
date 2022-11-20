@@ -206,6 +206,7 @@ int ContCita::cantTaxi() {
 	string tipo = typeid(*pExt->getCita()->getTra()).name();
 
 	while (pExt != NULL) {
+		string tipo = typeid(*pExt->getCita()->getTra()).name();
 		if (tipo == "class Taxi") {
 			aux1++;
 			pExt = pExt->getSiguiente();
@@ -220,6 +221,7 @@ int ContCita::cantAmb() {
 	string tipo = typeid(*pExt->getCita()->getTra()).name();
 
 	while (pExt != NULL) {
+		string tipo = typeid(*pExt->getCita()->getTra()).name();
 		if (tipo == "class Ambulancia") {
 			aux1++;
 			pExt = pExt->getSiguiente();

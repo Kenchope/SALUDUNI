@@ -31,11 +31,12 @@ SaludUni* Vista::hospital = new SaludUni();
 	  int opc;
 	  system("cls");
 	  cout << "-----------SubMenuCitas---------" << endl;
-	  cout << "     1- Ingresar Citas           " << endl; // Problemas para ingresar
-	  cout << "     2- Eliminar Citas           " << endl; //V
-	  cout << "     3- Editar Citas             " << endl; //V
-	  cout << "     4- Citas por paciente       " << endl; //V
-	  cout << "     5- Salir                    " << endl;
+	  cout << "     1- Ingresar Citas           " << endl; 
+      cout << "     2- Buscar Cita              " << endl;
+	  cout << "     3- Eliminar Citas           " << endl; 
+	  cout << "     4- Editar Citas             " << endl; 
+	  cout << "     5- Citas por paciente       " << endl; 
+	  cout << "     6- Salir                    " << endl;
 	  cout << "------------------------" << endl;
 	  cout << "     Digite la opcion: ";
 	  cin >> opc;
@@ -148,6 +149,17 @@ SaludUni* Vista::hospital = new SaludUni();
           return;
       }
           
+  }
+  void Vista::citaPorCod() {
+      string cod;
+      system("cls");
+      cout << "Ingrese el codigo de la cita deseada: " << endl;
+      cin >> cod;
+      if (hospital->getContCita()->retornaCita(cod) != NULL)
+          cout << hospital->getContCita()->muestraCita(cod);
+      else
+          cout << "No se encontro la cita con ese codigo." << endl;
+      system("pause>nul");
   }
   void Vista::eliminaCita(){
       system("cls");

@@ -30,9 +30,9 @@ string ContTrans::mostrarTaxis(){
 	Cobro* cob = new Cobro();
 
 	while (pExt != NULL) {
+		string tipo = typeid(*pExt->getTransporte()).name();
 		if (tipo == "class Taxi") {
 			s << pExt->getTransporte()->toString() << endl;
-			s << cob->calcularTotalD(pExt->getTransporte()) << endl;
 		}
 		pExt = pExt->getSiguiente();
 	}
@@ -43,6 +43,7 @@ string ContTrans::mostrarAmbulancias(){
 	stringstream s;
 	string tipo = typeid(*pExt->getTransporte()).name();
 	while (pExt != NULL) {
+		string tipo = typeid(*pExt->getTransporte()).name();
 		if (tipo == "class Ambulancia") {
 			s << pExt->getTransporte()->toString() << endl;
 		}
@@ -198,6 +199,7 @@ double ContTrans::costoTotalTaxis(){
 
 
 	while (pExt != NULL) {
+		string tipo = typeid(*pExt->getTransporte()).name();
 		if (tipo == "class Taxi") {
 			aux += cob->calcularTotalD(pExt->getTransporte());
 		}

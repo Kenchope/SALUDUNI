@@ -8,6 +8,7 @@ int Ambulancia::getCodigo() { return codigo; }
 bool Ambulancia::getOcupacion() { return ocupacion; }
 string Ambulancia::toString() {
 	stringstream s;
+	s << "-------INFORMACION DE LA AMBULANCIA------" << endl;
 	s << Transporte::toString();
 	s << "Codigo: " << codigo << endl;
 	s << "Ocupacion: ";

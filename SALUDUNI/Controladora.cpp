@@ -33,10 +33,11 @@ void Controladora::control_7() {
 void Controladora::control_8(int opx) {
 	switch (opx) {
 	case 1: control_3(); break;
-	case 2: control_4(); break;
-	case 3: control_5(); break;
-	case 4: control_6(); break;
-	case 5: control_7(); break;
+	case 2: control_67(); break;
+	case 3: control_4(); break;
+	case 4: control_5(); break;
+	case 5: control_6(); break;
+	case 6: control_7(); break;
 	}
 }
 //----------------------------------------
@@ -238,7 +239,7 @@ void Controladora::control_57() { //SUBEMENU #1 -> subemnu de citas
 	do {
 		op = control_2();
 		control_8(op); system("pause");
-	} while (op != 5);
+	} while (op != 6);
 }
 
 void Controladora::control_58() { //SUBMENU #2 -> submenu de mantenimiento
@@ -308,4 +309,8 @@ void Controladora::control_65(int opx){
 
 void Controladora::control_66() {
 	Vista::infoProyecto();
+}
+
+void Controladora::control_67() {
+	Vista::citaPorCod();
 }

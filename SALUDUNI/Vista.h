@@ -14,6 +14,7 @@ public:
 	//--------------------------------
 	static int menuCita();
 	static void ingresaCita();
+	static void citaPorCod();
 	static void eliminaCita();
 	static void editaCita();
 	static void citasPorPaciente();

@@ -104,6 +104,7 @@ string contPac::listaExiliados(){
 	stringstream s;
 
 	while (pExt != NULL) {
+		tipo = typeid(*pExt->getPaciente()).name();
 			if (pExt->getPaciente()->getCond() == "Exiliado") {
 				s << pExt->getPaciente()->toString() << endl;
 			}
@@ -184,6 +185,7 @@ string contPac::mostrarProInt() {
 	string tipo = typeid(*pExt->getPaciente()).name();
 
 	while (pExt != NULL) {
+		tipo = typeid(*pExt->getPaciente()).name();
 		if (tipo == "class ProfInte") {
 			s << pExt->getPaciente()->toString() << endl;
 		}
@@ -198,6 +200,7 @@ string contPac::mostrarProEnProp() {
 	string tipo = typeid(*pExt->getPaciente()).name();
 
 	while (pExt != NULL) {
+		tipo = typeid(*pExt->getPaciente()).name();
 		if (tipo == "class ProfProp") {
 			s << pExt->getPaciente()->toString() << endl;
 		}
@@ -212,6 +215,7 @@ string contPac::mostrarEstNac() {
 	string tipo = typeid(*pExt->getPaciente()).name();
 
 	while (pExt != NULL) {
+		tipo = typeid(*pExt->getPaciente()).name();
 		if (tipo == "class EstNac") {
 			s << pExt->getPaciente()->toString() << endl;
 		}
@@ -226,6 +230,7 @@ string contPac::mostrarEstInt() {
 	string tipo = typeid(*pExt->getPaciente()).name();
 
 	while (pExt != NULL) {
+		tipo = typeid(*pExt->getPaciente()).name();
 		if (tipo == "class EstInt") {
 			s << pExt->getPaciente()->toString() << endl;
 		}

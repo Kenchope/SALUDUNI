@@ -80,4 +80,5 @@ public:
 	void control_64(int);
 	void control_65(int);
 	void control_66();
+	void control_67();
 };
