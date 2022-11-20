@@ -19,5 +19,5 @@ public:
 	string toString();
 	int getNumPas();
 	void setNumPas(int);
-
+	// ------------------
 };
