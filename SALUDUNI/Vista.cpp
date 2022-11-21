@@ -24,7 +24,7 @@ SaludUni* Vista::hospital = new SaludUni();
       cin >> dir;
       cout << "Digite el nombre del hospital: " << endl;
       cin >> nom;
-      SaludUni* Vista::hospital = new SaludUni(ced, num, dir, nom);
+      hospital = new SaludUni(ced, num, dir, nom);
       system("cls");
 	  int opcion;
 	  cout << "--------HOSPITAL UNIVERSITARIO-------" << endl;
