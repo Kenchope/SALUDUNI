@@ -19,6 +19,7 @@ private:
 	ContCita* conteCitas;
 public:
 	SaludUni();
+	SaludUni(string,string,string,string);
 	virtual ~SaludUni();
 	string toString();
 	//--------------------

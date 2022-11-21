@@ -12,6 +12,17 @@ SaludUni::SaludUni() {
 	conteCitas = new ContCita();
 }
 
+SaludUni::SaludUni(string ced, string num, string dir, string nom) {
+	cedJur = ced;
+	numTel = num;
+	direccion = dir;
+	nombre = nom;
+	conteMed = new ListaMedico();
+	contePac = new contPac();
+	conteTrans = new ContTrans();
+	conteCitas = new ContCita();
+}
+
 SaludUni::~SaludUni(){
 	if (conteMed != NULL) delete conteMed;
 	if (contePac != NULL)delete contePac;

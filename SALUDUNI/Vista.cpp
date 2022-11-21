@@ -13,6 +13,18 @@ SaludUni* Vista::hospital = new SaludUni();
 	  system("cls");
   }
   int Vista::menu_1(){
+      string ced, num, dir, nom;
+      system("cls");
+      cout << "Digite los siguientes datos..." << endl;
+      cout << "Digite la cedula juridica del hospital: " << endl;
+      cin >> ced;
+      cout << "Digite el numero de telefono del hospital: " << endl;
+      cin >> num;
+      cout << "Digite la direccion (sin espacios) del hospital: " << endl;
+      cin >> dir;
+      cout << "Digite el nombre del hospital: " << endl;
+      cin >> nom;
+      SaludUni* Vista::hospital = new SaludUni(ced, num, dir, nom);
       system("cls");
 	  int opcion;
 	  cout << "--------HOSPITAL UNIVERSITARIO-------" << endl;
@@ -741,8 +753,13 @@ SaludUni* Vista::hospital = new SaludUni();
   }
   void Vista::transporteMasUsado(){
       system("cls");
-      cout << "Ambulancias: " << hospital->getContCita()->cantAmb() << endl;
-      cout << "Taxis: " << hospital->getContCita()->cantTaxi() << endl;
+      if (hospital->getContTrans()->isEmpty() == false) {
+          cout << "Ambulancias: " << hospital->getContCita()->cantAmb() << endl;
+          cout << "Taxis: " << hospital->getContCita()->cantTaxi() << endl;
+      }
+      else
+          cout << "No hay transportes." << endl;
+
       system("pause>nul");
   }
   void Vista::ambulanciasOcupadas(){
